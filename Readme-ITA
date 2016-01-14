@@ -1,0 +1,14 @@
+Il dispositivo che si vuole presentare è in sostanza un robot in grado di suonare la chitarra acustica in modo completamente automatizzato.
+I comandi vengono trasmessi da uno smartphone android, che tramite un terminale bluetooth invia ad arduino il codice corrispondente al brano da eseguire. Arduino decodifica il codice ricevuto ed elabora il programma corrispondente ad uno dei brani archiviati in memoria, fornendo agli attuatori (servomotori e motori stepper) le istruzioni necessarie per il corretto funzionamento dell’automa.
+La chitarra è collocata orizzontalmente su un piano liscio e regolare dove sono alloggiati tutti i supporti realizzati artigianalmente per sostenere i vari attuatori.
+
+Sulla parte destra della cassa acustica sono stati posti due archi in alluminio, fissati sul piano con barre filettate, che sostengono tre servomotori ciascuno. In particolare ciascun servomotore dotato di un plettro è posto su una corda in modo tale da riuscire a pizzicare le corde con precisione. 
+
+Sul manico, sei motori stepper con ruota dentata alloggiata sull’asse muovono sei barre a cremagliera, tenute in pressione ed in posizione sulle corde da una piastra in plexiglass opportunamente scanalata. Ad ogni posizione corrisponde una nota.
+
+CARATTERISTICHE TECNICHE
+Il microcontrollore utilizzato per l’automa è Arduino Mega 2560, una scheda embedded con microcontrollore ATmega2560. Dispone di 54 I/O digitali (pin), 16 ingressi analogici, 4 UART (porte seriali hardware), un cristallo oscillatore 16MHz, una connessione USB, un jack di alimentazione e un pulsante di reset.
+Poiché necessitavamo una grande quantità di I/O digitali, abbiamo deciso di utilizzare Arduino Mega per il pilotaggio di sei servomotori, sei motori stepper con i rispettivi driver e sei finecorsa. 
+Il modulo bluetooth utilizzato è l’HC-05, che permette di trasformare una porta UART conosciuta come seriale, in una porta bluetooth.
+I servomotori utilizzati sono i Servo Towerpro MG995 dotati di alta velocità e grande forza di torsione.
+I motori stepper SY42STH38-1206B sono pilotati dai driver L298N.
